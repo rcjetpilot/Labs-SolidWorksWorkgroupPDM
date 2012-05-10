@@ -8,7 +8,7 @@ to use the DriveWorks API to implement a simple
 integration into SolidWorks Workgroup PDM.
 
 This code is provided under the MIT license,
-for more details see [LICENSE.md](https://github.com/DriveWorks/Labs-SolidWorks-WPDM/blob/master/LICENSE.md).
+for more details see [LICENSE.md](https://github.com/DriveWorks/Labs-SolidWorksWorkgroupPDM/blob/master/LICENSE.md).
 
 This sample code was built using:
 - Microsoft Visual Studio 2010 SP1
