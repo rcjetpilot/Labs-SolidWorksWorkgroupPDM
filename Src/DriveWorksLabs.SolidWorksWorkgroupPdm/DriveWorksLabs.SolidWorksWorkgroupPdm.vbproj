@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13DD3C49-9132-4B4A-9120-D6814B890148}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DriveWorksLabs.SolidWorksWorkgroupPdm</RootNamespace>
+    <AssemblyName>DriveWorksLabs.SolidWorksWorkgroupPdm</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <DocumentationFile>DriveWorksLabs.SolidWorksWorkgroupPdm.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DocumentationFile>DriveWorksLabs.SolidWorksWorkgroupPdm.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>DriveWorksLabs.SolidWorksWorkgroupPdm.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>DriveWorksLabs.SolidWorksWorkgroupPdm.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DriveWorks.Applications">
+      <HintPath>..\..\References\DriveWorks.Applications.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DriveWorks.Engine">
+      <HintPath>..\..\References\DriveWorks.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DriveWorks.SolidWorks">
+      <HintPath>..\..\References\DriveWorks.SolidWorks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PDMWorks.Interop.pdmworks">
+      <HintPath>..\..\Lib\PDMWorks.Interop.pdmworks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\IPdmExceptionHandler.vb" />
+    <Compile Include="Common\IPdmInterface.vb" />
+    <Compile Include="Common\Models\GenerationServiceHandler+DrawingContextHandler.vb" />
+    <Compile Include="Common\Models\GenerationServiceHandler+ModelContextHandler.vb" />
+    <Compile Include="Common\Models\GenerationServiceHandler.vb" />
+    <Compile Include="Common\Specifications\SpecificationOptions.vb" />
+    <Compile Include="Common\Specifications\SpecificationServiceHandler+SpecificationContextHandler.vb" />
+    <Compile Include="Common\Specifications\SpecificationServiceHandler.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WorkgroupPdm\Integration\WorkgroupPdmExtensions.vb" />
+    <Compile Include="WorkgroupPdm\Integration\WorkgroupVaultManager.vb" />
+    <Compile Include="WorkgroupPdm\Logger.vb" />
+    <Compile Include="WorkgroupPdm\Support\Crypt.vb" />
+    <Compile Include="WorkgroupPdm\Integration\WorkgroupPdmInterface.vb" />
+    <Compile Include="WorkgroupPdm\LocalizedResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkgroupPdm\Plugin.vb" />
+    <Compile Include="WorkgroupPdm\PluginExceptionHandler.vb" />
+    <Compile Include="WorkgroupPdm\PluginLibrary.vb" />
+    <Compile Include="WorkgroupPdm\PluginSettings.vb" />
+    <Compile Include="WorkgroupPdm\UI\FooterPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkgroupPdm\UI\HeaderPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkgroupPdm\UI\PluginSettingsForm.designer.vb">
+      <DependentUpon>PluginSettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkgroupPdm\UI\PluginSettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkgroupPdm\LoggingLevel.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkgroupPdm\LocalizedResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkgroupPdm\UI\FooterPanel.resx">
+      <DependentUpon>FooterPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkgroupPdm\UI\HeaderPanel.resx">
+      <DependentUpon>HeaderPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkgroupPdm\UI\PluginSettingsForm.resx">
+      <DependentUpon>PluginSettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DriveWorksLg.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

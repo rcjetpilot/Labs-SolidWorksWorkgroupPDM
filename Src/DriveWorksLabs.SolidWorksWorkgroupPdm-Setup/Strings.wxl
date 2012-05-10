@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2012 DriveWorks Ltd. All rights reserved. See LICENSE.md in the repository root for license information. -->
+
+<?include Configuration.wxi ?>
+
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="DriveWorksVersion">9</String>
+  <String Id="ProductName">SolidWorks Workgroup PDM for DriveWorks !(loc.DriveWorksVersion)</String>
+  <String Id="ProductKeywords">DriveWorks,PDM,Workgroup</String>
+  <String Id="ProductDescription">Plug-in for DriveWorks which enables working with SolidWorks Workgroup PDM.</String>
+  <String Id="ProductComments">DriveWorks - THE easy-to-use design automation choice for SolidWorks</String>
+  <String Id="DiskPrompt">!(loc.ProductName) Installer [1]</String>
+
+  <String Id="ConditionMessage_Admin">You need to be an administrator to install this product.</String>
+  <String Id="ConditionMessage_OS">You must be running Windows XP SP2 or later, or Windows Server 2003 or later.</String>
+  <String Id="ConditionMessage_NETFX">This setup requires the .NET Framework 2.0 or higher.</String>
+  <String Id="ConditionMessage_NEWER">[ProductName] cannot be installed as a newer version is already present.</String>
+</WixLocalization>

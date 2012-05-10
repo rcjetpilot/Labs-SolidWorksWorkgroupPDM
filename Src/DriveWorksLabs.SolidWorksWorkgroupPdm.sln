@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DriveWorksLabs.SolidWorksWorkgroupPdm", "DriveWorksLabs.SolidWorksWorkgroupPdm\DriveWorksLabs.SolidWorksWorkgroupPdm.vbproj", "{13DD3C49-9132-4B4A-9120-D6814B890148}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "DriveWorksLabs.SolidWorksWorkgroupPdm-Setup", "DriveWorksLabs.SolidWorksWorkgroupPdm-Setup\DriveWorksLabs.SolidWorksWorkgroupPdm-Setup.wixproj", "{D4E4A27E-06D4-4636-B279-732F701D6CBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{05EC6770-1A24-493F-985F-2D42C0490283}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE.md = ..\LICENSE.md
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Debug|x86.ActiveCfg = Debug|x86
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Debug|x86.Build.0 = Debug|x86
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Release|x86.ActiveCfg = Release|x86
+		{13DD3C49-9132-4B4A-9120-D6814B890148}.Release|x86.Build.0 = Release|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Debug|Any CPU.Build.0 = Debug|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Debug|x86.ActiveCfg = Debug|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Debug|x86.Build.0 = Debug|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Release|Any CPU.ActiveCfg = Release|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Release|Any CPU.Build.0 = Release|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Release|x86.ActiveCfg = Release|x86
+		{D4E4A27E-06D4-4636-B279-732F701D6CBD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

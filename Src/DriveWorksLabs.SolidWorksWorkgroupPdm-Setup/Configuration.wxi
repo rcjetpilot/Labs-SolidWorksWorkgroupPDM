@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!--
+      NOTE: There is one version specific variable (DriveWorksVersion)
+      in the strings file that can't be defined here because 
+      localization files don't have access to preprocessor variables
+   -->
+
+  <!-- 
+      Core MSI Properties 
+    -->
+  <?define Package.UpgradeCode = '{9979F108-1243-4662-8FAF-40FAF657FCC1}'?>
+  <?define Version.Full = '9.1.0.0'?>
+  <?define Strings.Company = 'DriveWorks Ltd'?>
+  
+  <!-- 
+      Need to resolve paths differently if we're compiling inside Visual Studio
+      as opposed to as part our build environment
+   -->
+  <?if DriveWorksLabs.SolidWorksWorkgroupPdm.TargetDir=''?>
+    <?define Paths.Outputs = '$(var.TargetDir)'?>
+  <?else?>
+    <?define Paths.Outputs = '$(var.DriveWorksLabs.SolidWorksWorkgroupPdm.TargetDir)'?>
+  <?endif?>
+</Include>

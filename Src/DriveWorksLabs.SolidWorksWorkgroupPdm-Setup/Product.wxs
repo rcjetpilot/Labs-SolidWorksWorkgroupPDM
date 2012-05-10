@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) 2012 DriveWorks Ltd. All rights reserved. See LICENSE.md in the repository root for license information. -->
+
+<?include Configuration.wxi ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Details for the product this setup is for -->
+  <Product Name="!(loc.ProductName)"
+			     Id="*"
+			     UpgradeCode="$(var.Package.UpgradeCode)"
+			     Language="1033"
+			     Codepage="1252"
+			     Version="$(var.Version.Full)"
+			     Manufacturer="$(var.Strings.Company)">
+
+    <!-- 
+          Details for this package which installs the product
+          NOTES:
+          Comments must be included for patchability
+          Description may not contain apostrophes for patchability         
+    -->
+    <Package Keywords="!(loc.ProductKeywords)"
+				 Description="!(loc.ProductDescription)"
+				 Comments="!(loc.ProductComments)"
+				 InstallerVersion="200"
+				 Languages="1033"
+				 SummaryCodepage="1252"
+				 Compressed="yes"
+				 Manufacturer="$(var.Strings.Company)"
+				 InstallPrivileges="elevated" />
+
+    <!-- Media details -->
+    <Media Id='1' Cabinet='DWSWPDM.cab' EmbedCab='yes' DiskPrompt="Source Media" />
+    <Property Id='DiskPrompt' Value="!(loc.DiskPrompt)" />
+    
+    <!-- Installation prerequisites -->
+    <Condition Message="!(loc.ConditionMessage_Admin)">
+      Privileged
+    </Condition>
+    
+    <Condition Message="!(loc.ConditionMessage_OS)">
+      <![CDATA[(VersionNT = 501 AND ServicePackLevel >= 2) OR VersionNT > 501]]>
+    </Condition>
+
+    <Condition Message="!(loc.ConditionMessage_NETFX)">
+      <![CDATA[MsiNetAssemblySupport >= "2.0.50727"]]>
+    </Condition>
+
+    <!-- Add/Remove Programs Support -->
+    <Property Id="ARPURLINFOABOUT">http://www.driveworks.co.uk/</Property>
+    <Property Id="ARPHELPLINK">http://support.driveworks.co.uk/</Property>
+
+    <!-- User interface -->
+    <UIRef Id="WixUI_Minimal" />
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Background.bmp" />
+
+    <!-- Upgrade conditions -->
+    <Upgrade Id="$(var.Package.UpgradeCode)">
+
+      <!-- Check for a newer version -->
+      <UpgradeVersion Minimum="$(var.Version.Full)"
+							IncludeMinimum="no"
+							OnlyDetect="yes"
+							Property="NEWERVERSION" />
+    </Upgrade>
+
+    <!-- Used in the installation execution sequence to make sure a newer version isn't installed -->
+    <CustomAction Id="DenyRetrograde" Error="!(loc.ConditionMessage_NEWER)" />
+
+    <!-- Installation sequence -->
+    <InstallExecuteSequence>
+
+      <!-- Ensure a newer version is not installed -->
+      <Custom Action="DenyRetrograde" After="FindRelatedProducts">NEWERFOUND</Custom>
+
+      <!-- This isn't required in this version, but will be for any that upgrade this one -->
+      <RemoveExistingProducts After="InstallFinalize" />
+    </InstallExecuteSequence>
+
+    <!-- Make sure features are imported from Sources.wxs -->
+    <FeatureGroupRef Id="Features"/>
+
+    <!-- Directory structure -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" Name="PFILES">
+        <Directory Id="DirDriveWorks" Name="DriveWorks">
+          <Directory Id="INSTALLDIR" Name="WorkgroupPDM">
+
+              <!-- Target directory for source code -->
+              <Directory Id="SourceDir" Name="Source">
+              </Directory>
+
+              <!-- Target directory for binaries -->
+              <Directory Id="BinDir" Name="Bin">
+              </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Product>
+</Wix>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2012 DriveWorks Ltd. All rights reserved. See LICENSE.md in the repository root for license information. -->
+
+<?include Configuration.wxi ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <!-- Features -->
+    <FeatureGroup Id="Features">
+
+      <!-- Binaries -->
+      <Feature Id="Binaries" Level="1" Title="Binaries" AllowAdvertise="no"
+               Description="Installs all the components required for the SolidWorks Workgroup PDM." />
+    </FeatureGroup>
+
+    <!-- Components -->
+    <DirectoryRef Id="INSTALLDIR">
+
+      <Component Feature="Binaries">
+
+        <!-- The Main Assembly -->
+        <File Id="PluginDll" Name="DriveWorksLabs.SolidWorksWorkgroupPdm.dll" Vital="yes" KeyPath="yes" Source="$(var.Paths.Outputs)" />
+
+        <!-- Make sure it is registered with DriveWorks 9 -->
+        <RegistryKey Action="createAndRemoveOnUninstall" Root="HKLM" Key="Software\DriveWorks\9\Common\Libraries\DriveWorksLabs.SolidWorksWorkgroupPdm">
+          <RegistryValue Action="write" Type="multiString" Name="Profiles" Value="Shared" />
+          <RegistryValue Action="write" Type="string" Name="Path" Value="[#PluginDll]" />
+          <RegistryValue Action="write" Type="integer" Name="IsCompat64" Value="1" />
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

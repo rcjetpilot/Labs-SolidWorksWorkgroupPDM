@@ -1,0 +1,11 @@
+# Build and Object Folders
+[Bb]in/
+[Oo]bj/
+
+#User Specific Files
+*.user
+*.suo
+
+#Resource Caches
+_ReSharper.*
+*.sln.cache
