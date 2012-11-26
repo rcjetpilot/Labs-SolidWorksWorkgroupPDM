@@ -31,6 +31,7 @@ Partial Class PluginSettingsForm
         Me.PasswordText = New System.Windows.Forms.TextBox()
         Me.BodyLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.SilentLabel = New System.Windows.Forms.Label()
+        Me.RequestPortNum = New System.Windows.Forms.NumericUpDown()
         Me.SpecFilesCheck = New System.Windows.Forms.CheckBox()
         Me.ModelFilesCheck = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,6 +41,7 @@ Partial Class PluginSettingsForm
         Me.DataPortLabel = New System.Windows.Forms.Label()
         Me.TopLevelProjectLabel = New System.Windows.Forms.Label()
         Me.TopLevelProjectText = New System.Windows.Forms.TextBox()
+        Me.DataPortNum = New System.Windows.Forms.NumericUpDown()
         Me.BodyPanel = New System.Windows.Forms.Panel()
         Me.FinishButton = New System.Windows.Forms.Button()
         Me.DlgCancelButton = New System.Windows.Forms.Button()
@@ -51,17 +53,15 @@ Partial Class PluginSettingsForm
         Me.FooterPanel = New DriveWorksLabs.SolidWorksWorkgroupPdm.FooterPanel()
         Me.FooterLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.TestButton = New System.Windows.Forms.Button()
-        Me.RequestPortNum = New System.Windows.Forms.NumericUpDown()
-        Me.DataPortNum = New System.Windows.Forms.NumericUpDown()
         Me.BodyLayoutPanel.SuspendLayout()
+        CType(Me.RequestPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BodyPanel.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
         Me.HeaderLayoutPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FooterPanel.SuspendLayout()
         Me.FooterLayoutPanel.SuspendLayout()
-        CType(Me.RequestPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'VaultNameLabel
@@ -171,6 +171,15 @@ Partial Class PluginSettingsForm
         Me.SilentLabel.TabIndex = 8
         Me.SilentLabel.Text = "Check Documents in"
         '
+        'RequestPortNum
+        '
+        Me.RequestPortNum.Location = New System.Drawing.Point(136, 200)
+        Me.RequestPortNum.Maximum = New Decimal(New Integer() {65535, 0, 0, 0})
+        Me.RequestPortNum.Name = "RequestPortNum"
+        Me.RequestPortNum.Size = New System.Drawing.Size(164, 20)
+        Me.RequestPortNum.TabIndex = 3
+        Me.RequestPortNum.ThousandsSeparator = True
+        '
         'SpecFilesCheck
         '
         Me.SpecFilesCheck.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -239,9 +248,9 @@ Partial Class PluginSettingsForm
         Me.DataPortLabel.AutoSize = True
         Me.DataPortLabel.Location = New System.Drawing.Point(5, 230)
         Me.DataPortLabel.Name = "DataPortLabel"
-        Me.DataPortLabel.Size = New System.Drawing.Size(52, 13)
+        Me.DataPortLabel.Size = New System.Drawing.Size(55, 13)
         Me.DataPortLabel.TabIndex = 4
-        Me.DataPortLabel.Text = "DataPort:"
+        Me.DataPortLabel.Text = "Data Port:"
         '
         'TopLevelProjectLabel
         '
@@ -260,6 +269,15 @@ Partial Class PluginSettingsForm
         Me.TopLevelProjectText.Name = "TopLevelProjectText"
         Me.TopLevelProjectText.Size = New System.Drawing.Size(214, 20)
         Me.TopLevelProjectText.TabIndex = 2
+        '
+        'DataPortNum
+        '
+        Me.DataPortNum.Location = New System.Drawing.Point(136, 226)
+        Me.DataPortNum.Maximum = New Decimal(New Integer() {65535, 0, 0, 0})
+        Me.DataPortNum.Name = "DataPortNum"
+        Me.DataPortNum.Size = New System.Drawing.Size(164, 20)
+        Me.DataPortNum.TabIndex = 3
+        Me.DataPortNum.ThousandsSeparator = True
         '
         'BodyPanel
         '
@@ -389,24 +407,6 @@ Partial Class PluginSettingsForm
         Me.TestButton.Text = "&Test"
         Me.TestButton.UseVisualStyleBackColor = True
         '
-        'RequestPortNum
-        '
-        Me.RequestPortNum.Location = New System.Drawing.Point(136, 200)
-        Me.RequestPortNum.Maximum = New Decimal(New Integer() {65535, 0, 0, 0})
-        Me.RequestPortNum.Name = "RequestPortNum"
-        Me.RequestPortNum.Size = New System.Drawing.Size(164, 20)
-        Me.RequestPortNum.TabIndex = 3
-        Me.RequestPortNum.ThousandsSeparator = True
-        '
-        'DataPortNum
-        '
-        Me.DataPortNum.Location = New System.Drawing.Point(136, 226)
-        Me.DataPortNum.Maximum = New Decimal(New Integer() {65535, 0, 0, 0})
-        Me.DataPortNum.Name = "DataPortNum"
-        Me.DataPortNum.Size = New System.Drawing.Size(164, 20)
-        Me.DataPortNum.TabIndex = 3
-        Me.DataPortNum.ThousandsSeparator = True
-        '
         'PluginSettingsForm
         '
         Me.AcceptButton = Me.FinishButton
@@ -426,6 +426,8 @@ Partial Class PluginSettingsForm
         Me.Text = "SolidWorks Workgroup PDM Integration Configuration"
         Me.BodyLayoutPanel.ResumeLayout(False)
         Me.BodyLayoutPanel.PerformLayout()
+        CType(Me.RequestPortNum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataPortNum, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BodyPanel.ResumeLayout(False)
         Me.HeaderPanel.ResumeLayout(False)
         Me.HeaderLayoutPanel.ResumeLayout(False)
@@ -433,8 +435,6 @@ Partial Class PluginSettingsForm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FooterPanel.ResumeLayout(False)
         Me.FooterLayoutPanel.ResumeLayout(False)
-        CType(Me.RequestPortNum, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataPortNum, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
