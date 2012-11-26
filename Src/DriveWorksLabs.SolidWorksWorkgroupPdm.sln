@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{05EC6770-1
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{7970AF8B-2373-4816-AFFC-B3427A9A5816}"
+	ProjectSection(SolutionItems) = preProject
+		DriveWorksLabs.SolidWorksWorkgroupPdm-Setup\Configuration.wxi = DriveWorksLabs.SolidWorksWorkgroupPdm-Setup\Configuration.wxi
+		DriveWorksLabs.SolidWorksWorkgroupPdm\_Properties\RuntimeVersionData.vb = DriveWorksLabs.SolidWorksWorkgroupPdm\_Properties\RuntimeVersionData.vb
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

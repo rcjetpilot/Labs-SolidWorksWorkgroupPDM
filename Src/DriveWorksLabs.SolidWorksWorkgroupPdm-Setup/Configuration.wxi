@@ -7,12 +7,32 @@
       localization files don't have access to preprocessor variables
    -->
 
+  <!--
+    Update this version number if we're releasing a new version
+    of the plugin, reset to 1 if the SDK version changes
+  -->
+  <?define Version.Plugin = "1" ?>
+
+  <!--
+    Update these versions to correspond to the SDK against which
+    we are building
+  -->
+  <?define Version.Sdk.Major = "9" ?>
+  <?define Version.Sdk.Minor = "3" ?>
+  <?define Version.Sdk.Revision = "0" ?>
+
+  <?define Version.Sdk.Combined = "$(var.Version.Sdk.Major).$(var.Version.Sdk.Minor).$(var.Version.Sdk.Revision)" ?>
+  <?define Version.Sdk.Display = "$(var.Version.Sdk.Major) SP$(var.Version.Sdk.Minor).$(var.Version.Sdk.Revision)" ?>
+  <?define Version.Full = "$(var.Version.Sdk.Combined).$(var.Version.Plugin)" ?>
+  <?define Version.Assembly = "$(var.Version.Full)" ?>
+  <?define Version.Product = "v$(var.Version.Assembly) (DriveWorks $(var.Version.Sdk.Display) or later)" ?>
+  
   <!-- 
       Core MSI Properties 
     -->
   <?define Package.UpgradeCode = '{9979F108-1243-4662-8FAF-40FAF657FCC1}'?>
-  <?define Version.Full = '9.1.0.0'?>
   <?define Strings.Company = 'DriveWorks Ltd'?>
+  <?define Strings.ProductName = "Workgroup PDM for DriveWorks $(var.Version.Product)"?>
   
   <!-- 
       Need to resolve paths differently if we're compiling inside Visual Studio

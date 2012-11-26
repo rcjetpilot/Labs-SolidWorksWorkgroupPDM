@@ -6,6 +6,15 @@ Imports PDMWorks.Interop.pdmworks
 
 Friend Class PluginSettingsForm
 
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.LabelVersion.Text = RuntimeVersionData.VersionProduct
+    End Sub
+
     Public Sub LoadSettings(ByVal settings As PluginSettings)
         Me.VaultText.Text = settings.VaultName
         Me.UserNameText.Text = settings.VaultUserName

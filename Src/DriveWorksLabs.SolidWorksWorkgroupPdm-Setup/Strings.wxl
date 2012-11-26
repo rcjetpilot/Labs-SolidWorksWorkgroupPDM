@@ -5,8 +5,6 @@
 <?include Configuration.wxi ?>
 
 <WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
-  <String Id="DriveWorksVersion">9</String>
-  <String Id="ProductName">SolidWorks Workgroup PDM for DriveWorks !(loc.DriveWorksVersion)</String>
   <String Id="ProductKeywords">DriveWorks,PDM,Workgroup</String>
   <String Id="ProductDescription">Plug-in for DriveWorks which enables working with SolidWorks Workgroup PDM.</String>
   <String Id="ProductComments">DriveWorks - THE easy-to-use design automation choice for SolidWorks</String>

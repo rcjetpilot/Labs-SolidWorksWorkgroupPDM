@@ -7,7 +7,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <!-- Details for the product this setup is for -->
-  <Product Name="!(loc.ProductName)"
+  <Product Name="$(var.Strings.ProductName)"
 			     Id="*"
 			     UpgradeCode="$(var.Package.UpgradeCode)"
 			     Language="1033"
@@ -33,19 +33,22 @@
 
     <!-- Media details -->
     <Media Id='1' Cabinet='DWSWPDM.cab' EmbedCab='yes' DiskPrompt="Source Media" />
-    <Property Id='DiskPrompt' Value="!(loc.DiskPrompt)" />
-    
+    <Property Id='DiskPrompt' Value="$(var.Strings.ProductName)" />
+
     <!-- Installation prerequisites -->
     <Condition Message="!(loc.ConditionMessage_Admin)">
       Privileged
     </Condition>
-    
+
+    <!-- XP SP3 or later -->
     <Condition Message="!(loc.ConditionMessage_OS)">
-      <![CDATA[(VersionNT = 501 AND ServicePackLevel >= 2) OR VersionNT > 501]]>
+      <![CDATA[(VersionNT = 501 AND ServicePackLevel >= 3) OR VersionNT > 501]]>
     </Condition>
 
+    <!-- .NET Framework 4 -->
+    <PropertyRef Id="NETFRAMEWORK40FULL"/>
     <Condition Message="!(loc.ConditionMessage_NETFX)">
-      <![CDATA[MsiNetAssemblySupport >= "2.0.50727"]]>
+      <![CDATA[Installed OR NETFRAMEWORK40FULL]]>
     </Condition>
 
     <!-- Add/Remove Programs Support -->

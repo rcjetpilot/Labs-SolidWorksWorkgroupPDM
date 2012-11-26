@@ -53,6 +53,7 @@ Partial Class PluginSettingsForm
         Me.FooterPanel = New DriveWorksLabs.SolidWorksWorkgroupPdm.FooterPanel()
         Me.FooterLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.TestButton = New System.Windows.Forms.Button()
+        Me.LabelVersion = New System.Windows.Forms.Label()
         Me.BodyLayoutPanel.SuspendLayout()
         CType(Me.RequestPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataPortNum, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -343,9 +344,9 @@ Partial Class PluginSettingsForm
         Me.DescriptionLabel.Location = New System.Drawing.Point(3, 29)
         Me.DescriptionLabel.Name = "DescriptionLabel"
         Me.DescriptionLabel.Padding = New System.Windows.Forms.Padding(8)
-        Me.DescriptionLabel.Size = New System.Drawing.Size(384, 29)
+        Me.DescriptionLabel.Size = New System.Drawing.Size(380, 29)
         Me.DescriptionLabel.TabIndex = 2
-        Me.DescriptionLabel.Text = "Configure and Test the settings used by DriveWorks to connect to your vault"
+        Me.DescriptionLabel.Text = "Configure and test the settings used by DriveWorks to connect to your vault"
         '
         'HeaderLabel
         '
@@ -390,6 +391,7 @@ Partial Class PluginSettingsForm
         Me.FooterLayoutPanel.Controls.Add(Me.TestButton, 0, 0)
         Me.FooterLayoutPanel.Controls.Add(Me.FinishButton, 3, 0)
         Me.FooterLayoutPanel.Controls.Add(Me.DlgCancelButton, 2, 0)
+        Me.FooterLayoutPanel.Controls.Add(Me.LabelVersion, 1, 0)
         Me.FooterLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FooterLayoutPanel.Location = New System.Drawing.Point(0, 2)
         Me.FooterLayoutPanel.Name = "FooterLayoutPanel"
@@ -406,6 +408,17 @@ Partial Class PluginSettingsForm
         Me.TestButton.TabIndex = 0
         Me.TestButton.Text = "&Test"
         Me.TestButton.UseVisualStyleBackColor = True
+        '
+        'LabelVersion
+        '
+        Me.LabelVersion.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.LabelVersion.AutoSize = True
+        Me.LabelVersion.Location = New System.Drawing.Point(199, 9)
+        Me.LabelVersion.Margin = New System.Windows.Forms.Padding(3)
+        Me.LabelVersion.Name = "LabelVersion"
+        Me.LabelVersion.Size = New System.Drawing.Size(227, 13)
+        Me.LabelVersion.TabIndex = 3
+        Me.LabelVersion.Text = "_VERSION_NUMBER_AUTO_POPULATED_"
         '
         'PluginSettingsForm
         '
@@ -435,6 +448,7 @@ Partial Class PluginSettingsForm
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FooterPanel.ResumeLayout(False)
         Me.FooterLayoutPanel.ResumeLayout(False)
+        Me.FooterLayoutPanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -468,4 +482,5 @@ Partial Class PluginSettingsForm
     Friend WithEvents TopLevelProjectText As System.Windows.Forms.TextBox
     Friend WithEvents RequestPortNum As System.Windows.Forms.NumericUpDown
     Friend WithEvents DataPortNum As System.Windows.Forms.NumericUpDown
+    Friend WithEvents LabelVersion As System.Windows.Forms.Label
 End Class
