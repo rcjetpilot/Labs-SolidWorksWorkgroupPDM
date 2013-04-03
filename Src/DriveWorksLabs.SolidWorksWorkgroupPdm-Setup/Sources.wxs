@@ -24,10 +24,17 @@
         <File Id="PluginDll" Name="DriveWorksLabs.SolidWorksWorkgroupPdm.dll" Vital="yes" KeyPath="yes" Source="$(var.Paths.Outputs)" />
 
         <!-- Make sure it is registered with DriveWorks 9 -->
-        <RegistryKey Action="createAndRemoveOnUninstall" Root="HKLM" Key="Software\DriveWorks\9\Common\Libraries\DriveWorksLabs.SolidWorksWorkgroupPdm">
-          <RegistryValue Action="write" Type="multiString" Name="Profiles" Value="Shared" />
-          <RegistryValue Action="write" Type="string" Name="Path" Value="[#PluginDll]" />
-          <RegistryValue Action="write" Type="integer" Name="IsCompat64" Value="1" />
+        <RegistryKey Root="HKLM" Key="Software\DriveWorks\9\Common\Libraries\DriveWorksLabs.SolidWorksWorkgroupPdm">
+          <RegistryValue Type="multiString" Name="Profiles" Value="Shared" />
+          <RegistryValue Type="string" Name="Path" Value="[#PluginDll]" />
+          <RegistryValue Type="integer" Name="IsCompat64" Value="1" />
+        </RegistryKey>
+
+        <!-- Make sure it is registered with DriveWorks 10 -->
+        <RegistryKey Root="HKLM" Key="Software\DriveWorks\10\Common\Libraries\DriveWorksLabs.SolidWorksWorkgroupPdm">
+          <RegistryValue Type="multiString" Name="Profiles" Value="Shared" />
+          <RegistryValue Type="string" Name="Path" Value="[#PluginDll]" />
+          <RegistryValue Type="integer" Name="IsCompat64" Value="1" />
         </RegistryKey>
       </Component>
     </DirectoryRef>
